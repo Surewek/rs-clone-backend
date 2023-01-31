@@ -2,9 +2,10 @@
   "name": "rs-clone-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
+  "type": "module",
   "scripts": {
-    "start": "node palletport-server/index.ts",
+    "start": "ts-node palletport-server/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
