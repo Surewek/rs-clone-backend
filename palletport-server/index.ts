@@ -13,6 +13,7 @@ app.use(express.json());
 const startServer = async () => {
     try {
         await mongoose.connect(DB_URL);
+
         app.listen(PORT, () => console.log('It work WOW!'));
     } catch (error) {
         console.error(error);
