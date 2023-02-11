@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import { pool } from './db';
 
 const PORT = process.env.PORT ?? 5300;
 const DB_LOGIN = 'palletenjoer';
