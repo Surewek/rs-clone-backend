@@ -57,9 +57,9 @@ create TABLE delivery(
     id SERIAL PRIMARY KEY,
     deliveryType delivery_type,
     deliveryTimeMin FLOAT,
-    deliveryTimeMin FLOAT,
+    deliveryTimeMax FLOAT,
     deliveryPrice FLOAT
-)
+);
 
 create TABLE company(
     id SERIAL PRIMARY KEY,
@@ -67,7 +67,7 @@ create TABLE company(
     NIP VARCHAR(255),
     address_id INTEGER,
     IBAN VARCHAR(255),
-    paymentDate INTEGER
+    paymentDate INTEGER,
     VAT INTEGER,
     email VARCHAR(255),
     phone VARCHAR(255),
@@ -76,7 +76,7 @@ create TABLE company(
     FOREIGN KEY (address_id) REFERENCES address (id)
 );
 
-create TABLE user(
+create TABLE users(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     email VARCHAR(255),
@@ -105,24 +105,24 @@ create TABLE offer(
     description VARCHAR(255),
     offerStatus offer_status,
     rating FLOAT,
-    isTop BIT
+    isTop BIT,
     FOREIGN KEY (product_id) REFERENCES product (id),
-    FOREIGN KEY (seller_id) REFERENCES user (id),
-    FOREIGN KEY (company_id) REFERENCES company (id),
+    FOREIGN KEY (seller_id) REFERENCES users (id),
+    FOREIGN KEY (company_id) REFERENCES company (id)
 );
 
 create TABLE cart(
     id SERIAL PRIMARY KEY,
-    user_id NUMBER,
+    user_id INTEGER,
     offers INTEGER ARRAY,
-    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
-create TABLE order(
+create TABLE orders(
     id SERIAL PRIMARY KEY,
-    card_id NUMBER,
+    cart_id INTEGER,
     orderStatus offer_status,
     payment payment_type,
     paymentStatus BIT,
-    FOREIGN KEY (card_id) REFERENCES cart (id),
+    FOREIGN KEY (cart_id) REFERENCES cart (id)
 );
