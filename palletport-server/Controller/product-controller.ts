@@ -1,19 +1,25 @@
 class ProductController {
-    // async createProducts(request, response) {
+    async createProduct(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // };
+    async getProduct(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 
-    // async getProduct(request, response) {
+    async updateProduct(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // };
-
-    // async createProduct(request, response) {
-
-    // };
-
-    // async deleteProduct(request, response) {
-
-    // };
+    async deleteProduct(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 }
 
 export default new ProductController();

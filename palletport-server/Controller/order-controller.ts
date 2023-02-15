@@ -1,23 +1,30 @@
 class OrderController {
-    // async createOrders(request, response) {
+    async createOrder(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // };
+    async getOrder(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 
-    // async getOrders(request, response) {
+    async updateOrder(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // };
+    async deleteOrder(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 
-    // async createOrder(request, response) {
-
-    // };
-
-    // async deleteOrder(request, response) {
-
-    // };
-
-    // async getOrder(request, response) {
-
-    // };
+    async getSortedOrders(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 }
 
 export default new OrderController();

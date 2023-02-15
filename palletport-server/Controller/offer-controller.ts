@@ -1,23 +1,31 @@
 class OfferController {
-    // async createOffers(request, response) {
+    async createOffer(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // };
+    async getOffer(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 
-    // async getOffers(request, response) {
+    async updateOffer(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // };
+    async deleteOffer(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 
-    // async createOffer(request, response) {
-
-    // };
-
-    // async deleteOffer(request, response) {
-
-    // };
-
-    // async createOfferImage(request, response) {
-
-    // };
+    async createOfferImage(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 }
 
 export default new OfferController();

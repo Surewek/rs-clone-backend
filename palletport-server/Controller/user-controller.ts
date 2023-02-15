@@ -1,27 +1,48 @@
 class UserController {
-    // async createUser(request, response) {
+    async getUser(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 
-    // };
+    async createUser(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // async loginUser(request, response) {
+    async loginUser(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // };
+    async registerUser(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // async logoutUser(request, response) {
+    async logoutUser(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // };
+    async getOneUser(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 
-    // async getUser(request, response) {
+    async updateUser(request: any, response: any) {
+        const obj = request.body;
+        console.log('Curr body: ', obj);
+        response.json('OK');
+    };
 
-    // };
-
-    // async updateUser(request, response) {
-
-    // };
-
-    // async deleteUser(request, response) {
-
-    // };
+    async deleteUser(request: any, response: any) {
+        console.log('Curr request: ', request);
+        response.json('OK');
+    };
 }
 
 export default new UserController();
