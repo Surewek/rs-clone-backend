@@ -1,5 +1,4 @@
 import express from 'express';
-import { pool } from './db';
 import offerRouter from './Routers/offer-router.js';
 import orderRouter from './Routers/order-router.js';
 import productRouter from './Routers/product-router.js';
