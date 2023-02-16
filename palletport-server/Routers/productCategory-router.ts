@@ -4,8 +4,8 @@ import productCategoryController from '../Controller/productCategory-controller.
 const productCategoryRouter = Router();
 
 productCategoryRouter.post('/productCategories', productCategoryController.createProductCategory);
-productCategoryRouter.get('/productCategories/:productCategoryId', productCategoryController.getProductCategory);
-productCategoryRouter.post('/productCategories/:productCategoryId', productCategoryController.updateProductCategory);
-productCategoryRouter.delete('/productCategories/:productCategoryId', productCategoryController.deleteProductCategory);
+productCategoryRouter.get('/productCategories/:id', productCategoryController.getProductCategory);
+productCategoryRouter.post('/productCategories/:id', productCategoryController.updateProductCategory);
+productCategoryRouter.delete('/productCategories/:id', productCategoryController.deleteProductCategory);
 
 export default productCategoryRouter;

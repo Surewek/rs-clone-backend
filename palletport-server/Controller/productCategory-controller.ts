@@ -1,25 +1,25 @@
 import { pool } from "../db.js";
+import productCategoryModel from "../Model/productCategory-model.js";
 
 class ProductCategoryController {
     async createProductCategory(request: any, response: any) {
-        // const { name, description, image, shortName } = request.body;
-        // const newProductCategory = await pool.query('INSERT INTO product_category (name, description, image, shortname) values ($1, $2, $3, $4) RETURNING *', [ name, description, image, shortName ]);
-        // response.json(newProductCategory);
+        const ProductCategory = await productCategoryModel.create(request.body);
+        response.json(ProductCategory.rows[0]);
     };
 
     async getProductCategory(request: any, response: any) {
-        console.log('Curr request: ', request);
-        response.json('OK');
+        const ProductCategory = await productCategoryModel.get(request.params.id);
+        response.json(ProductCategory.rows[0]);
     };
 
     async updateProductCategory(request: any, response: any) {
-        console.log('Curr request: ', request);
-        response.json('OK');
+        const ProductCategory = await productCategoryModel.update(request.params.id, request.body);
+        response.json(ProductCategory.rows[0]);
     };
 
     async deleteProductCategory(request: any, response: any) {
-        console.log('Curr request: ', request);
-        response.json('OK');
+        const ProductCategory = await productCategoryModel.delete(request.params.id);
+        response.json(ProductCategory.rows[0]);
     };
 }
 
