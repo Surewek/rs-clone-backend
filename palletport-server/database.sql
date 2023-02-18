@@ -33,7 +33,8 @@ create TABLE product(
     width FLOAT,
     height FLOAT,
     maxLoad INTEGER,
-    category VARCHAR(255)
+    category_id INTEGER
+    FOREIGN KEY (category_id) REFERENCES product_category (id)
 );
 
 create TABLE coordinates(
